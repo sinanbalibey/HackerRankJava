@@ -7,14 +7,16 @@ public class Main {
         List<Integer> a=new ArrayList<>();
         List<Integer> b=new ArrayList<>();
         a.add(2);
-        a.add(6);
-        b.add(24);
-        b.add(36);
+        a.add(4);
+        b.add(16);
+        b.add(32);
+        b.add(96);
 
 
     }
     class Result {
         public static int getTotalX(List<Integer> a, List<Integer> b) {
+
 
 
 
