@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,22 +7,42 @@ public class Main {
         String a=scan.nextLine();
         String b=scan.nextLine();
 
-        List<String> a1=new ArrayList<>();
-        List<String> b1=new ArrayList<>();
 
+        a=a.toLowerCase();
+        b=b.toLowerCase();
 
+        char[] arra=a.toCharArray();
+        char[] arrb=b.toCharArray();
 
-        for(int i=0;i<a.length();i++){
-            a1.add(i, String.valueOf(a.charAt(i)));
-            b1.add(i,String.valueOf(b.charAt(i)));
+        Arrays.sort(arra);
+        Arrays.sort(arrb);
+
+        a=new String(arra);
+        b=new String(arrb);
+       
+        if(a.equals(b)){
+            System.out.println("Anagrams");
+        }else {
+            System.out.println("Not Anagrams");
         }
-        Collections.reverse(b1);
-        int temp=0;
+        System.out.println(a.equals(b));
+       /* int i,j;
+        int count=0;
+        for(i=0,j=b.length()-1;i<a.length()&&j>=0;i++,j--){
+            if(a.charAt(i)==b.charAt(j)){
+                count++;
+            }
+        }
+        if(count==a.length()){
+            System.out.println("Anagrams");
+        }else {
+            System.out.println("Not Anagrams");
+        }*/
 
-        System.out.println(temp);
-        System.out.println(a1);
-        System.out.println(b1);
+
+
 
 
     }
+
 }
