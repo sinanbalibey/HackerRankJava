@@ -19,7 +19,7 @@ public class Main {
 
         a=new String(arra);
         b=new String(arrb);
-       
+
         if(a.equals(b)){
             System.out.println("Anagrams");
         }else {
